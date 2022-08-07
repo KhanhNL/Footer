@@ -31,19 +31,18 @@
         flex-wrap: wrap;
         width: 90%;
         margin: 0 auto;
+        
         }
         
         .row .col{
             width: calc(100% / 6);
             height: 200px;
-            
-            border: 1px solid black;
         }
         
         .row .col:last-child{
             width: calc(100% / 3);
         }
-        
+
         .footer-links h3{
             font-size: 20px;
             margin-bottom: 30px;
@@ -77,7 +76,7 @@
             
         }
 
-        a:before{
+        a::after{
             content:'';
             width:0%;
             height: 2px;
@@ -85,16 +84,52 @@
             position:absolute;
             top:100%;
             left:0;
-            transition:.5s;
+            transition:.3s;
         }
 
-        a:hover:before{
+        a:hover::after{
             width:100%;
+        }
+
+        .Subscribe h3{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .Subscribe p{
+            display: block;
+            margin-bottom: 10px;
+            color: #6F6C90;
+        }
+
+        .Subscribe input[type="email"]{
+            width: 100%;
+            border: 1px solid #D9DBE9;
+            padding: 20px;
+            border-radius: 108px;
+            margin-bottom: 15px;
+        }
+
+        .Subscribe input[type="submit"]{
+            width: 125px;
+            border: none;
+            outline: none;
+            padding: 20px;
+            border-radius: 76px;
+            background-color: #4A3AFF;
+            color: white;
+            transition: .4s;
+        }
+
+        .Subscribe input[type="submit"]:hover{
+            background-color: white;
+            border: #4A3AFF solid 1px;
+            color: #4A3AFF;
         }
 
     </style>
 
-    <title>test</title>
+    <title>Footer</title>
 </head>
 
 <body>
@@ -150,7 +185,11 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="footer-links">
+                    <div class="Subscribe">
+                        <h3>Subcribe to our news letter</h3>
+                        <p>Subscribe to the latest news from us to receive the latest pictures</p>
+                        <input type="email" placeholder="Enter your email"><br>
+                        <input type="submit" value="Subscribe">
                     </div>
                 </div>
             </div>
